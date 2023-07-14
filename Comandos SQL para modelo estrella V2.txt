@@ -1,0 +1,78 @@
+﻿-- Crear la tabla de dimensiones
+
+-- Dimensión Producto
+CREATE TABLE DimProducto (
+    ProductoKey INT PRIMARY KEY,
+    ProductoID INT,
+    Nombre VARCHAR(100),
+    Categoria VARCHAR(50),
+    Subcategoria VARCHAR(50),
+    Precio DECIMAL(10,2), 
+    Descripcion VARCHAR(50),
+    -- Otros atributos del producto
+);
+
+-- Dimensión Cliente
+CREATE TABLE DimCliente (
+    ClienteKey INT PRIMARY KEY,
+    ClienteID INT,
+    Nombre VARCHAR(100),
+    Nit VARCHAR(50),
+    Giro VARCHAR(50),
+    TipoDeCliente VARCHAR(50),
+    FechaRegistro DATE,
+    -- Otros atributos del cliente
+);
+
+-- Dimensión Tiempo
+CREATE TABLE DimTiempo (
+    TiempoKey INT PRIMARY KEY,
+    TiempoID INT,
+    Fecha DATE,
+    DiaSemana VARCHAR(20),
+    Mes VARCHAR(20),
+    Anio INT,
+    -- Otros atributos relacionados con la fecha
+);
+
+-- Dimensión Dirección
+CREATE TABLE DimDireccion (
+    DireccionKey INT PRIMARY KEY,
+    DireccionID INT,
+    Zona VARCHAR(100),
+    Ciudad VARCHAR(50),
+    Distrito VARCHAR(50),    
+    Departamento VARCHAR(50),
+    -- Otros atributos de la dirección
+);
+
+
+-- Dimensión Costo
+CREATE TABLE DimCosto (
+    CostoKey INT PRIMARY KEY,
+    CostoID INT,
+    Costo DECIMAL(10,2),
+    Vendedor VARCHAR(50),  
+    Descripcion VARCHAR(50),
+    -- Otros atributos de la dirección
+);
+
+-- Crear la tabla de hecho
+
+CREATE TABLE FacFactura (
+    FacturaKey INT PRIMARY KEY,    
+    FacturaID INT,
+    ProductoKey INT,
+    ClienteKey INT,
+    TiempoKey INT,
+    CostoKey INT,
+    DireccionKey INT,
+    Cantidad INT,
+    Precio DECIMAL(10,2),
+    -- Otros atributos de la factura
+    FOREIGN KEY (ProductoKey) REFERENCES DimProducto(ProductoKey),
+    FOREIGN KEY (ClienteKey) REFERENCES DimCliente(ClienteKey),
+    FOREIGN KEY (TiempoKey) REFERENCES DimTiempo(TiempoKey),
+    FOREIGN KEY (CostoKey) REFERENCES DimCosto(CostoKey),
+    FOREIGN KEY (DireccionKey) REFERENCES DimDireccion(DireccionKey)
+);
