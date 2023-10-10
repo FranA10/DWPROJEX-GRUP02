@@ -1,0 +1,304 @@
+!SESSION 2023-10-09 21:15:11.048 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.19
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/C:/Users/Fran/Desktop/MasterOnly/Especializacion/Proyecto/DWPROJEX-GRUP02/ETL/
+
+!ENTRY org.eclipse.jdt.launching.macosx 4 0 2023-10-09 21:15:11.969
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.macosx [19]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jdt.launching.ui.macosx 4 0 2023-10-09 21:15:11.971
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.ui.macosx [20]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.emf.ecore 2 0 2023-10-09 21:15:13.512
+!MESSAGE Both 'org.talend.model' and 'org.talend.model' register a package for 'http://www.talend.org/component_cache'
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:15:14.225
+!MESSAGE 2023-10-09 21:15:14,222 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\studio.keys
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:15:14.352
+!MESSAGE 2023-10-09 21:15:14,351 INFO  org.talend.rcp.intro.Application  - 
+!!------------------------------------------------------------------------!!
+!!                                                                        !!
+!!                                 TALEND                                 !!
+!!   Starting Talend's platform log system.VERSION= 8.0.1.20211109_1610   !!
+!!                                                                        !!
+!!------------------------------------------------------------------------!!
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:15:14.544
+!MESSAGE 2023-10-09 21:15:14,543 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into http.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:15:14.545
+!MESSAGE 2023-10-09 21:15:14,544 INFO  org.talend.commons.exception.CommonExceptionHandler  - org.talend.commons.utils.network.TalendProxySelector:-Dtalend.studio.proxy.excludeLoopbackAutomatically=true, adding missing loopback addresses into https.nonProxyHosts: [localhost, 0:0:0:0:0:0:0:1, 127.0.0.1]
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:15:54.798
+!MESSAGE 2023-10-09 21:15:54,797 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tck, version=8.0.1.20211103_1602, classifier=null, type=pom, componentType=0] was already installed
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:15:54.799
+!MESSAGE 2023-10-09 21:15:54,799 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcksdk, version=8.0.1.20211103_1602, classifier=null, type=pom, componentType=0] was already installed
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:15:54.801
+!MESSAGE 2023-10-09 21:15:54,801 INFO  org.talend.updates.runtime.maven.M2repoBaseInstaller  - GAV [groupId=org.talend.studio, artifactId=repo-tcompv0, version=8.0.1.20211103_1602, classifier=null, type=pom, componentType=0] was already installed
+
+
+!ENTRY org.talend.platform.logging 2 0 2023-10-09 21:15:58.552
+!MESSAGE 2023-10-09 21:15:58,547 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [org.talend.sdk.component.server.service.ComponentManagerService.init] No system property 'jdk.serialFilter', ensure it is intended
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:15:59.663
+!MESSAGE 2023-10-09 21:15:59,662 INFO  org.talend.sdk.component.studio.ProcessManager  - Local addresses passed to sdk: [127.0.0.1, [0:0:0:0:0:0:0:1]]
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:00.049
+!MESSAGE 2023-10-09 21:16:00,048 INFO  org.talend.sdk.component.studio.ProcessManager  - Succeed to connect [http://127.0.0.1:51175/api/v1/environment]
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:01.770
+!MESSAGE 2023-10-09 21:16:01,770 INFO  org.talend.core.repository.model.ProxyRepositoryFactory  - user@talend.com logged on IBWImportarDatosAWS
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:03.445
+!MESSAGE 2023-10-09 21:16:03,445 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Fran\Desktop\MasterOnly\Especializacion\Proyecto\DWPROJEX-GRUP02\ETL\IBWIMPORTARDATOSAWS\poms
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:03.512
+!MESSAGE 2023-10-09 21:16:03,512 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s "C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\maven_user_settings.xml" install -llr -N -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:04.021
+!MESSAGE 2023-10-09 21:16:04,020 INFO  org.talend.core.repository.logintask.ReadOnlyProjectConfirm  - ReadOnly confirm
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:04.353
+!MESSAGE 2023-10-09 21:16:04,351 INFO  org.talend.designer.codegen.components.model.ComponentsLoader  - allSet size: 573, total: 573
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:05.487
+!MESSAGE 2023-10-09 21:16:05,486 INFO  org.talend.designer.codegen.components.model.ComponentsFactory  - 640 components loaded in 1304 ms
+
+
+!ENTRY org.talend.platform.logging 2 0 2023-10-09 21:16:06.083
+!MESSAGE 2023-10-09 21:16:06,082 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP220
+
+
+!ENTRY org.talend.platform.logging 2 0 2023-10-09 21:16:06.084
+!MESSAGE 2023-10-09 21:16:06,084 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP_2_3
+
+
+!ENTRY org.talend.platform.logging 2 0 2023-10-09 21:16:06.256
+!MESSAGE 2023-10-09 21:16:06,256 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP220
+
+
+!ENTRY org.talend.platform.logging 2 0 2023-10-09 21:16:06.257
+!MESSAGE 2023-10-09 21:16:06,257 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: TEZ-SERVER-LIB-HDP_2_3
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:15.589
+!MESSAGE 2023-10-09 21:16:15,588 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:17.757
+!MESSAGE 2023-10-09 21:16:17,756 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:17.758
+!MESSAGE 2023-10-09 21:16:17,758 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /IBWIMPORTARDATOSAWS_ROUTINES/src/main/java overlaps with sources folder /IBWIMPORTARDATOSAWS_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:17.771
+!MESSAGE 2023-10-09 21:16:17,771 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:17.772
+!MESSAGE 2023-10-09 21:16:17,772 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /IBWIMPORTARDATOSAWS_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:18.065
+!MESSAGE 2023-10-09 21:16:18,064 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 2 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:20.493
+!MESSAGE 2023-10-09 21:16:20,492 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Fran\Desktop\MasterOnly\Especializacion\Proyecto\DWPROJEX-GRUP02\ETL\IBWIMPORTARDATOSAWS\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:20.493
+!MESSAGE 2023-10-09 21:16:20,493 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s "C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\maven_user_settings.xml" install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:24.943
+!MESSAGE 2023-10-09 21:16:24,942 INFO  org.talend.core.model.relationship.RelationshipItemBuilder  - relationship.index generating
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:24.995
+!MESSAGE 2023-10-09 21:16:24,995 INFO  org.talend.core.model.relationship.RelationshipItemBuilder  - relationship.index generated
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:25.707
+!MESSAGE 2023-10-09 21:16:25,704 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:26.895
+!MESSAGE 2023-10-09 21:16:26,891 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:26.896
+!MESSAGE 2023-10-09 21:16:26,895 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /IBWIMPORTARDATOSAWS_ROUTINES/src/main/java overlaps with sources folder /IBWIMPORTARDATOSAWS_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:26.906
+!MESSAGE 2023-10-09 21:16:26,906 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:26.907
+!MESSAGE 2023-10-09 21:16:26,907 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /IBWIMPORTARDATOSAWS_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:27.084
+!MESSAGE 2023-10-09 21:16:27,083 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 1 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:29.732
+!MESSAGE 2023-10-09 21:16:29,730 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Fran\Desktop\MasterOnly\Especializacion\Proyecto\DWPROJEX-GRUP02\ETL\IBWIMPORTARDATOSAWS\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:29.733
+!MESSAGE 2023-10-09 21:16:29,733 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s "C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\maven_user_settings.xml" install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:30.331
+!MESSAGE 2023-10-09 21:16:30,331 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:30.516
+!MESSAGE 2023-10-09 21:16:30,515 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/IBWIMPORTARDATOSAWS_ROUTINES: org.example.ibwimportardatosaws.code:routines:8.0.1 with classifier  to /IBWIMPORTARDATOSAWS_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:30.685
+!MESSAGE 2023-10-09 21:16:30,685 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_BEANS/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:30.686
+!MESSAGE 2023-10-09 21:16:30,686 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /IBWIMPORTARDATOSAWS_BEANS/src/main/java overlaps with sources folder /IBWIMPORTARDATOSAWS_BEANS/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:30.693
+!MESSAGE 2023-10-09 21:16:30,692 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_BEANS/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:30.693
+!MESSAGE 2023-10-09 21:16:30,693 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /IBWIMPORTARDATOSAWS_BEANS/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:30.876
+!MESSAGE 2023-10-09 21:16:30,875 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:32.010
+!MESSAGE 2023-10-09 21:16:32,010 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/IBWIMPORTARDATOSAWS_ROUTINES: org.example.ibwimportardatosaws.code:routines:8.0.1 with classifier  to /IBWIMPORTARDATOSAWS_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:32.029
+!MESSAGE 2023-10-09 21:16:32,029 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Fran\Desktop\MasterOnly\Especializacion\Proyecto\DWPROJEX-GRUP02\ETL\IBWIMPORTARDATOSAWS\poms\code\beans
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:32.030
+!MESSAGE 2023-10-09 21:16:32,030 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s "C:\Program Files (x86)\TOS_DI-8.0.1\studio\configuration\maven_user_settings.xml" install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:44.593
+!MESSAGE 2023-10-09 21:16:44,592 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/IBWIMPORTARDATOSAWS_ROUTINES: org.example.ibwimportardatosaws.code:routines:8.0.1 with classifier  to /IBWIMPORTARDATOSAWS_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:44.733
+!MESSAGE 2023-10-09 21:16:44,733 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_ONBOARDINGDEMOJOB_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:44.734
+!MESSAGE 2023-10-09 21:16:44,734 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /IBWIMPORTARDATOSAWS_ONBOARDINGDEMOJOB_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:44.745
+!MESSAGE 2023-10-09 21:16:44,744 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_ONBOARDINGDEMOJOB_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:16:44.746
+!MESSAGE 2023-10-09 21:16:44,746 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /IBWIMPORTARDATOSAWS_ONBOARDINGDEMOJOB_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:01.750
+!MESSAGE 2023-10-09 21:18:01,748 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/IBWIMPORTARDATOSAWS_ROUTINES: org.example.ibwimportardatosaws.code:routines:8.0.1 with classifier  to /IBWIMPORTARDATOSAWS_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:01.856
+!MESSAGE 2023-10-09 21:18:01,855 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_CLIENTEJOB_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:01.858
+!MESSAGE 2023-10-09 21:18:01,857 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /IBWIMPORTARDATOSAWS_CLIENTEJOB_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:01.869
+!MESSAGE 2023-10-09 21:18:01,868 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_CLIENTEJOB_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:01.870
+!MESSAGE 2023-10-09 21:18:01,869 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /IBWIMPORTARDATOSAWS_CLIENTEJOB_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:15.833
+!MESSAGE 2023-10-09 21:18:15,832 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/IBWIMPORTARDATOSAWS_ROUTINES: org.example.ibwimportardatosaws.code:routines:8.0.1 with classifier  to /IBWIMPORTARDATOSAWS_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:16.013
+!MESSAGE 2023-10-09 21:18:16,012 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_CLIENTEJOB_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:16.014
+!MESSAGE 2023-10-09 21:18:16,013 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /IBWIMPORTARDATOSAWS_CLIENTEJOB_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:16.016
+!MESSAGE 2023-10-09 21:18:16,015 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /IBWIMPORTARDATOSAWS_CLIENTEJOB_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-10-09 21:18:16.017
+!MESSAGE 2023-10-09 21:18:16,017 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /IBWIMPORTARDATOSAWS_CLIENTEJOB_0.1/src/test/resources
+
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-10-09 21:18:22.254
+!MESSAGE The workspace will exit with unsaved changes in this session.
