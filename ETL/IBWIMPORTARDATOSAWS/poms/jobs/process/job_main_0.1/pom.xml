@@ -124,6 +124,26 @@
       <artifactId>routines</artifactId>
       <version>8.0.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_GetFacturaData</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_GetCustomerData</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_GetItemData</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_GetAddressData</artifactId>
+      <version>0.1.0</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>${talend.job.finalName}</finalName>

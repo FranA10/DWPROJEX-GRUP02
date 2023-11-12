@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_B-QiYIBOEe6dvbLzhFt9rA" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_-vj8UIBOEe6dvbLzhFt9rA" comment="" name="Raw" prompt="Raw?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Users/Fran/Desktop/IBW-Proyecto/Raw"/>
+  <contextParameter xmi:id="_kDiJIIBPEe6dvbLzhFt9rA" comment="" name="Staggin" prompt="Staggin?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Users/Fran/Desktop/IBW-Proyecto/Staggin"/>
+  <contextParameter xmi:id="_kDiJIYBPEe6dvbLzhFt9rA" comment="" name="Presen" prompt="Presen?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Users/Fran/Desktop/IBW-Proyecto/Presentation-access"/>
+</talendfile:ContextType>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_c9skEIDtEe6thMEgXD3PjQ" confirmationNeeded="false" name="Desarrollo"/>
+  <talendfile:ContextType xmi:id="_c9skEYDtEe6thMEgXD3PjQ" confirmationNeeded="false" name="Produccion"/>
+  <talendfile:ContextType xmi:id="_c9skEoDtEe6thMEgXD3PjQ" confirmationNeeded="false" name="Prueba"/>
+  <talendfile:ContextType xmi:id="_IXptIIDtEe6thMEgXD3PjQ" confirmationNeeded="false" name="Default"/>
+</xmi:XMI>

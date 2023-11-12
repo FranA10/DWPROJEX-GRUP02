@@ -1,0 +1,17 @@
+{
+  "itemId" : "_2ke88H68Ee62Lpzx59qe1g",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_8-nAAIDmEe6thMEgXD3PjQ",
+    "parameterList" : [ {
+      "id" : "_8-4s0YDmEe6thMEgXD3PjQ",
+      "name" : "FAccessKey"
+    }, {
+      "id" : "_8-4s0oDmEe6thMEgXD3PjQ",
+      "name" : "FSecertKey"
+    }, {
+      "id" : "_MmiFMIDpEe6thMEgXD3PjQ",
+      "name" : "NBucket"
+    } ]
+  } ]
+}

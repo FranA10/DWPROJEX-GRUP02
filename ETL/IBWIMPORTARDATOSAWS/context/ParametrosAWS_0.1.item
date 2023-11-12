@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_8-4s0IDmEe6thMEgXD3PjQ" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_8-4s0YDmEe6thMEgXD3PjQ" comment="" name="FAccessKey" prompt="FAccessKey?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="AKIAWPQYH5GKGRDBIMFA"/>
+  <contextParameter xmi:id="_8-4s0oDmEe6thMEgXD3PjQ" comment="" name="FSecertKey" prompt="FSecertKey?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="YjhExIj8ffvDzlqm8Ih8YYeQaH5SPQmyIDwe+oUg"/>
+  <contextParameter xmi:id="_MmiFMIDpEe6thMEgXD3PjQ" comment="" name="NBucket" prompt="NBucket?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bucket-grupo2"/>
+</talendfile:ContextType>
