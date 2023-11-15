@@ -11,6 +11,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_MmcpsIJqEe6qiednM1BjBA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_rV0tEIHmEe6lgaZEaw1IFQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_rV0tEIHmEe6lgaZEaw1IFQ - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_qjMagH6qEe62Lpzx59qe1g",
     "version" : "0.1",
     "type" : "job"
