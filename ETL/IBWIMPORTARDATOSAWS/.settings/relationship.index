@@ -16,11 +16,7 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_rV0tEIHmEe6lgaZEaw1IFQ",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_rV0tEIHmEe6lgaZEaw1IFQ - metadata",
+    "id" : "_V2t-sIN8Ee6orPuZR_5G-w - metadata",
     "version" : "Latest",
     "type" : "schema"
   } ]
