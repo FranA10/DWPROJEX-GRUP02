@@ -30,15 +30,15 @@
           <tags>persp.actionSet:org.talend.repository.localprovider.actionSet</tags>
           <tags>persp.actionSet:org.talend.repository.demoprojcet.actionSet</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_Wyh04WcbEe6x-fB85yOBxw" selectedElement="_Wyh04mcbEe6x-fB85yOBxw" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_Wyh04mcbEe6x-fB85yOBxw" containerData="3000" selectedElement="_Wyh042cbEe6x-fB85yOBxw">
-              <children xsi:type="basic:PartStack" xmi:id="_Wyh042cbEe6x-fB85yOBxw" elementId="navigatorLayout" containerData="6000" selectedElement="_Wyh05GcbEe6x-fB85yOBxw">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_Wyh04mcbEe6x-fB85yOBxw" containerData="1982" selectedElement="_Wyh042cbEe6x-fB85yOBxw">
+              <children xsi:type="basic:PartStack" xmi:id="_Wyh042cbEe6x-fB85yOBxw" elementId="navigatorLayout" containerData="6650" selectedElement="_Wyh05GcbEe6x-fB85yOBxw">
                 <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_Wyh05GcbEe6x-fB85yOBxw" elementId="org.talend.repository.cnf.view" ref="_WyWOsGcbEe6x-fB85yOBxw" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:Other</tags>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_Wyh05WcbEe6x-fB85yOBxw" elementId="outlineCodeLayout" containerData="4000" selectedElement="_Wyh05mcbEe6x-fB85yOBxw">
+              <children xsi:type="basic:PartStack" xmi:id="_Wyh05WcbEe6x-fB85yOBxw" elementId="outlineCodeLayout" containerData="3350" selectedElement="_Wyh05mcbEe6x-fB85yOBxw">
                 <children xsi:type="advanced:Placeholder" xmi:id="_Wyh05mcbEe6x-fB85yOBxw" elementId="org.eclipse.ui.views.ContentOutline" ref="_WyYq8GcbEe6x-fB85yOBxw" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
@@ -53,10 +53,10 @@
                 </children>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_Wyh06WcbEe6x-fB85yOBxw" containerData="7000" selectedElement="_Wyh06mcbEe6x-fB85yOBxw" horizontal="true">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_Wyh06mcbEe6x-fB85yOBxw" containerData="8000" selectedElement="_Wyh062cbEe6x-fB85yOBxw">
-                <children xsi:type="advanced:Placeholder" xmi:id="_Wyh062cbEe6x-fB85yOBxw" elementId="org.eclipse.ui.editorss" containerData="6000" ref="_WyKogGcbEe6x-fB85yOBxw"/>
-                <children xsi:type="basic:PartStack" xmi:id="_Wyh07GcbEe6x-fB85yOBxw" elementId="bottomLayout" containerData="4000" selectedElement="_Wyib8mcbEe6x-fB85yOBxw">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_Wyh06WcbEe6x-fB85yOBxw" containerData="8018" selectedElement="_Wyh06mcbEe6x-fB85yOBxw" horizontal="true">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_Wyh06mcbEe6x-fB85yOBxw" containerData="7724" selectedElement="_Wyh07GcbEe6x-fB85yOBxw">
+                <children xsi:type="advanced:Placeholder" xmi:id="_Wyh062cbEe6x-fB85yOBxw" elementId="org.eclipse.ui.editorss" containerData="5402" ref="_WyKogGcbEe6x-fB85yOBxw"/>
+                <children xsi:type="basic:PartStack" xmi:id="_Wyh07GcbEe6x-fB85yOBxw" elementId="bottomLayout" containerData="4598" selectedElement="_Wyib82cbEe6x-fB85yOBxw">
                   <children xsi:type="advanced:Placeholder" xmi:id="_Wyib8GcbEe6x-fB85yOBxw" elementId="org.talend.designer.core.ui.views.jobsettings.JobSettingsView" ref="_WybuQGcbEe6x-fB85yOBxw" closeable="true">
                     <tags>View</tags>
                     <tags>categoryTag:Other</tags>
@@ -75,7 +75,7 @@
                   </children>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_Wyib9GcbEe6x-fB85yOBxw" elementId="paletteLayout" containerData="2000" selectedElement="_Wyib9WcbEe6x-fB85yOBxw">
+              <children xsi:type="basic:PartStack" xmi:id="_Wyib9GcbEe6x-fB85yOBxw" elementId="paletteLayout" containerData="2276" selectedElement="_Wyib9WcbEe6x-fB85yOBxw">
                 <children xsi:type="advanced:Placeholder" xmi:id="_Wyib9WcbEe6x-fB85yOBxw" elementId="org.eclipse.gef.ui.palette_view" ref="_WyZ5EGcbEe6x-fB85yOBxw" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
@@ -2327,7 +2327,7 @@
   <addons xmi:id="_V4cLRmcbEe6x-fB85yOBxw" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_V4cLR2cbEe6x-fB85yOBxw" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_V5DPMGcbEe6x-fB85yOBxw" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_yCMx8IS5Ee6ByZd_UXbwZA" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_V6LQkGcbEe6x-fB85yOBxw" elementId="org.eclipse.team.ui.category.team" name="Version control (Team)" description="Actions that apply when working with a version control system"/>
   <categories xmi:id="_V6LQkWcbEe6x-fB85yOBxw" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
