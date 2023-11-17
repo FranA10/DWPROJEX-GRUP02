@@ -52,12 +52,42 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_Hiy4sITSEe6GgKJkXHasGw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_7H1z4ITREe6GgKJkXHasGw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_7H1z4ITREe6GgKJkXHasGw - Addressmetadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_MmcpsIJqEe6qiednM1BjBA",
     "version" : "0.1",
     "type" : "job"
   },
   "relatedItems" : [ {
     "id" : "_V2t-sIN8Ee6orPuZR_5G-w - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_QJkdEITZEe6GgKJkXHasGw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_NMG7gITbEe6GgKJkXHasGw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_NMG7gITbEe6GgKJkXHasGw - direccionmetadata",
     "version" : "Latest",
     "type" : "schema"
   } ]
