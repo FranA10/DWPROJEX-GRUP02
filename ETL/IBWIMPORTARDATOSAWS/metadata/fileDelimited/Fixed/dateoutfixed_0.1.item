@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_uoxvsYUUEe64b5eSF0NKOg" name="dateoutfixed" dataPackage="_uoxvsoUUEe64b5eSF0NKOg" Server="Localhost 127.0.0.1" FilePath="C:/Users/Fran/Desktop/IBW-Proyecto/Staggin/DimCliente.csv" Format="WINDOWS" Encoding="UTF-8" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" EscapeType="CSV" EscapeChar="&quot;\&quot;&quot;" TextEnclosure="&quot;\&quot;&quot;" CsvOption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_uoxvsoUUEe64b5eSF0NKOg" name="default" dataManager="_uoxvsYUUEe64b5eSF0NKOg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_uoxvs4UUEe64b5eSF0NKOg" id="_Z22_8IUUEe64b5eSF0NKOg" label="datemetadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uoxvtIUUEe64b5eSF0NKOg" label="clienteid" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uoxvtYUUEe64b5eSF0NKOg" label="nombre" length="55" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uoxvtoUUEe64b5eSF0NKOg" label="nit" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uoxvt4UUEe64b5eSF0NKOg" label="giro" length="111" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uoxvuIUUEe64b5eSF0NKOg" label="tipodecliente" length="16" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uoxvuYUUEe64b5eSF0NKOg" label="fecharegistro" length="10" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

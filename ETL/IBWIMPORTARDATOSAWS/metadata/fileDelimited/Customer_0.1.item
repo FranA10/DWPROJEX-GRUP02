@@ -9,7 +9,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V2vM04N8Ee6orPuZR_5G-w" label="giro" length="117" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V2vM1IN8Ee6orPuZR_5G-w" label="tipo_facturacion" length="16" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V2vM1YN8Ee6orPuZR_5G-w" label="nit" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V2vM1oN8Ee6orPuZR_5G-w" label="inicio_de_cliente" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V2vM1oN8Ee6orPuZR_5G-w" label="inicio_de_cliente" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V2vM14N8Ee6orPuZR_5G-w" label="owner" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V2vM2IN8Ee6orPuZR_5G-w" label="creation" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V2vM2YN8Ee6orPuZR_5G-w" label="docstatus" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>

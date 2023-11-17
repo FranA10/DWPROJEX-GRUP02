@@ -15,7 +15,7 @@ CREATE TABLE DimCliente (
     ClienteID VARCHAR(50),
     Nombre VARCHAR(100),
     Nit VARCHAR(50),
-    Giro VARCHAR(50),
+    Giro VARCHAR(150),
     TipoDeCliente VARCHAR(50),
     FechaRegistro DATE
 ) diststyle key
@@ -62,3 +62,52 @@ ALTER TABLE facfactura ADD constraint producto FOREIGN KEY (ProductoKey) REFEREN
 ALTER TABLE facfactura ADD constraint cliente FOREIGN KEY (ClienteKey) REFERENCES DimCliente(ClienteKey)
 ALTER TABLE facfactura ADD constraint tiempo FOREIGN KEY (TiempoKey) REFERENCES DimTiempo(TiempoKey)
 ALTER TABLE facfactura ADD constraint direccion FOREIGN KEY (DireccionKey) REFERENCES DimDireccion(DireccionKey)
+
+
+
+
+
+
+****************************************RAFA*********************************************************
+
+
+CREATE TABLE public.dimproducto (
+    productokey integer NOT NULL identity(1, 1) ENCODE raw
+    distkey
+,
+        productoid character varying(50) ENCODE lzo,
+        nombre character varying(100) ENCODE lzo,
+        categoria character varying(50) ENCODE lzo,
+        subcategoria character varying(50) ENCODE lzo,
+        descripcion character varying(50) ENCODE lzo,
+        precio numeric(10, 2) ENCODE az64,
+        PRIMARY KEY (productokey)
+) DISTSTYLE KEY
+SORTKEY
+    (productokey);
+
+DROP TABLE dimproducto CASCADE;
+
+
+
+
+
+
+***********************************************Francisco**************************************************
+
+CREATE TABLE public.dimcliente (
+    clientekey integer NOT NULL identity(1, 1) ENCODE raw
+    distkey
+,
+        clienteid character varying(50) ENCODE lzo,
+        nombre character varying(100) ENCODE lzo,
+        Nit character varying(50) ENCODE lzo,
+        Giro character varying(150) ENCODE lzo,
+        TipoDeCliente character varying(50) ENCODE lzo,
+        FechaRegistro DATE,
+        PRIMARY KEY (clientekey)
+) DISTSTYLE KEY
+SORTKEY
+    (clientekey);
+
+DROP TABLE dimcliente CASCADE;
