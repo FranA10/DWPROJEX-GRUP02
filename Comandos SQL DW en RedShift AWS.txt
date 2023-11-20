@@ -55,7 +55,7 @@ CREATE TABLE FacFactura (
 	Descuento DECIMAL (10,2)
 
 ) diststyle key
-distkey (ProductoKey)
+distkey (FacturaKey)
 
 
 ALTER TABLE facfactura ADD constraint producto FOREIGN KEY (ProductoKey) REFERENCES dimproducto(ProductoKey)

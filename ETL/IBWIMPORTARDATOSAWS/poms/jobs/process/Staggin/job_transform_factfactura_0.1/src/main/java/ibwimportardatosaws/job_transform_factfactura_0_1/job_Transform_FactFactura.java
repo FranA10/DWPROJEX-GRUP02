@@ -479,7 +479,7 @@ public class job_Transform_FactFactura implements TalendJob {
 				String dbUser_tDBConnection_1 = "awsuser";
 
 				final String decryptedPassword_tDBConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-						"enc:routine.encryption.key.v1:IvCmgjJyAJJzEnoYreKWzcFV4jmS/je7wF0szKMBCsWPlZ0oz4BMoA==");
+						"enc:routine.encryption.key.v1:HSOLjpDsDG3kvqVIGcLzCLymjqevfxDT2i00FWIr7RLL0/gyB48fwQ==");
 				String dbPwd_tDBConnection_1 = decryptedPassword_tDBConnection_1;
 
 				java.sql.Connection conn_tDBConnection_1 = null;
@@ -763,6 +763,12 @@ public class job_Transform_FactFactura implements TalendJob {
 		final static byte[] commonByteArrayLock_IBWIMPORTARDATOSAWS_job_Transform_FactFactura = new byte[0];
 		static byte[] commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura = new byte[0];
 
+		public String facturaid;
+
+		public String getFacturaid() {
+			return this.facturaid;
+		}
+
 		public Integer clientekey;
 
 		public Integer getClientekey() {
@@ -809,6 +815,68 @@ public class job_Transform_FactFactura implements TalendJob {
 
 		public Double getIva() {
 			return this.iva;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura.length) {
+					if (length < 1024 && commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura.length == 0) {
+						commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura = new byte[1024];
+					} else {
+						commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura, 0, length);
+				strReturn = new String(commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private String readString(org.jboss.marshalling.Unmarshaller unmarshaller) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = unmarshaller.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura.length) {
+					if (length < 1024 && commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura.length == 0) {
+						commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura = new byte[1024];
+					} else {
+						commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura = new byte[2 * length];
+					}
+				}
+				unmarshaller.readFully(commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura, 0, length);
+				strReturn = new String(commonByteArray_IBWIMPORTARDATOSAWS_job_Transform_FactFactura, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private void writeString(String str, org.jboss.marshalling.Marshaller marshaller) throws IOException {
+			if (str == null) {
+				marshaller.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				marshaller.writeInt(byteArray.length);
+				marshaller.write(byteArray);
+			}
 		}
 
 		private Integer readInteger(ObjectInputStream dis) throws IOException {
@@ -860,6 +928,8 @@ public class job_Transform_FactFactura implements TalendJob {
 				try {
 
 					int length = 0;
+
+					this.facturaid = readString(dis);
 
 					this.clientekey = readInteger(dis);
 
@@ -914,6 +984,8 @@ public class job_Transform_FactFactura implements TalendJob {
 
 					int length = 0;
 
+					this.facturaid = readString(dis);
+
 					this.clientekey = readInteger(dis);
 
 					this.direccionkey = readInteger(dis);
@@ -961,6 +1033,10 @@ public class job_Transform_FactFactura implements TalendJob {
 
 		public void writeData(ObjectOutputStream dos) {
 			try {
+
+				// String
+
+				writeString(this.facturaid, dos);
 
 				// Integer
 
@@ -1022,6 +1098,10 @@ public class job_Transform_FactFactura implements TalendJob {
 
 		public void writeData(org.jboss.marshalling.Marshaller dos) {
 			try {
+
+				// String
+
+				writeString(this.facturaid, dos);
 
 				// Integer
 
@@ -1086,7 +1166,8 @@ public class job_Transform_FactFactura implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("clientekey=" + String.valueOf(clientekey));
+			sb.append("facturaid=" + facturaid);
+			sb.append(",clientekey=" + String.valueOf(clientekey));
 			sb.append(",direccionkey=" + String.valueOf(direccionkey));
 			sb.append(",productokey=" + String.valueOf(productokey));
 			sb.append(",tiempokey=" + String.valueOf(tiempokey));
@@ -2858,7 +2939,7 @@ public class job_Transform_FactFactura implements TalendJob {
 							+ "\" already exist. If you want to overwrite the file, please uncheck the"
 							+ " \"Throw an error if the file already exist\" option in Advanced settings.");
 				}
-				String[] headColutFileOutputDelimited_1 = new String[8];
+				String[] headColutFileOutputDelimited_1 = new String[9];
 				class CSVBasicSet_tFileOutputDelimited_1 {
 					private char field_Delim;
 					private char row_Delim;
@@ -2983,14 +3064,15 @@ public class job_Transform_FactFactura implements TalendJob {
 					CsvWritertFileOutputDelimited_1.setLineEnd("" + csvSettings_tFileOutputDelimited_1.getRowDelim());
 				}
 				if (filetFileOutputDelimited_1.length() == 0) {
-					headColutFileOutputDelimited_1[0] = "clientekey";
-					headColutFileOutputDelimited_1[1] = "direccionkey";
-					headColutFileOutputDelimited_1[2] = "productokey";
-					headColutFileOutputDelimited_1[3] = "tiempokey";
-					headColutFileOutputDelimited_1[4] = "cantidad";
-					headColutFileOutputDelimited_1[5] = "precio";
-					headColutFileOutputDelimited_1[6] = "importe";
-					headColutFileOutputDelimited_1[7] = "iva";
+					headColutFileOutputDelimited_1[0] = "facturaid";
+					headColutFileOutputDelimited_1[1] = "clientekey";
+					headColutFileOutputDelimited_1[2] = "direccionkey";
+					headColutFileOutputDelimited_1[3] = "productokey";
+					headColutFileOutputDelimited_1[4] = "tiempokey";
+					headColutFileOutputDelimited_1[5] = "cantidad";
+					headColutFileOutputDelimited_1[6] = "precio";
+					headColutFileOutputDelimited_1[7] = "importe";
+					headColutFileOutputDelimited_1[8] = "iva";
 					CsvWritertFileOutputDelimited_1.writeNext(headColutFileOutputDelimited_1);
 					CsvWritertFileOutputDelimited_1.flush();
 				}
@@ -4072,6 +4154,7 @@ public class job_Transform_FactFactura implements TalendJob {
 								Salida_FactFactura = null;
 
 // # Output table : 'Salida_FactFactura'
+								Salida_FactFactura_tmp.facturaid = row1.name;
 								Salida_FactFactura_tmp.clientekey = row2.clientekey;
 								Salida_FactFactura_tmp.direccionkey = row3.direccionkey;
 								Salida_FactFactura_tmp.productokey = row4.productokey;
@@ -4119,22 +4202,24 @@ public class job_Transform_FactFactura implements TalendJob {
 									);
 								}
 
-								String[] rowtFileOutputDelimited_1 = new String[8];
-								rowtFileOutputDelimited_1[0] = Salida_FactFactura.clientekey == null ? null
+								String[] rowtFileOutputDelimited_1 = new String[9];
+								rowtFileOutputDelimited_1[0] = Salida_FactFactura.facturaid == null ? null
+										: Salida_FactFactura.facturaid;
+								rowtFileOutputDelimited_1[1] = Salida_FactFactura.clientekey == null ? null
 										: String.valueOf(Salida_FactFactura.clientekey);
-								rowtFileOutputDelimited_1[1] = Salida_FactFactura.direccionkey == null ? null
+								rowtFileOutputDelimited_1[2] = Salida_FactFactura.direccionkey == null ? null
 										: String.valueOf(Salida_FactFactura.direccionkey);
-								rowtFileOutputDelimited_1[2] = Salida_FactFactura.productokey == null ? null
+								rowtFileOutputDelimited_1[3] = Salida_FactFactura.productokey == null ? null
 										: String.valueOf(Salida_FactFactura.productokey);
-								rowtFileOutputDelimited_1[3] = Salida_FactFactura.tiempokey == null ? null
+								rowtFileOutputDelimited_1[4] = Salida_FactFactura.tiempokey == null ? null
 										: String.valueOf(Salida_FactFactura.tiempokey);
-								rowtFileOutputDelimited_1[4] = Salida_FactFactura.cantidad == null ? null
+								rowtFileOutputDelimited_1[5] = Salida_FactFactura.cantidad == null ? null
 										: String.valueOf(Salida_FactFactura.cantidad);
-								rowtFileOutputDelimited_1[5] = Salida_FactFactura.precio == null ? null
+								rowtFileOutputDelimited_1[6] = Salida_FactFactura.precio == null ? null
 										: String.valueOf(Salida_FactFactura.precio);
-								rowtFileOutputDelimited_1[6] = Salida_FactFactura.importe == null ? null
+								rowtFileOutputDelimited_1[7] = Salida_FactFactura.importe == null ? null
 										: String.valueOf(Salida_FactFactura.importe);
-								rowtFileOutputDelimited_1[7] = Salida_FactFactura.iva == null ? null
+								rowtFileOutputDelimited_1[8] = Salida_FactFactura.iva == null ? null
 										: String.valueOf(Salida_FactFactura.iva);
 								nb_line_tFileOutputDelimited_1++;
 								resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
@@ -8275,6 +8360,6 @@ public class job_Transform_FactFactura implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 247344 characters generated by Talend Open Studio for Data Integration on the
- * 19 de noviembre de 2023, 23:03:22 CST
+ * 250377 characters generated by Talend Open Studio for Data Integration on the
+ * 19 de noviembre de 2023, 23:20:49 CST
  ************************************************************************************************/
