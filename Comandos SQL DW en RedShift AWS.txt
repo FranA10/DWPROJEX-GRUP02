@@ -111,3 +111,27 @@ SORTKEY
     (clientekey);
 
 DROP TABLE dimcliente CASCADE;
+
+
+********************************************** Rafa ultimo cambio en tabla de hechos ***********************
+
+CREATE TABLE FacFactura (
+    FacturaKey INT PRIMARY KEY IDENTITY(1,1) not null sortkey distkey,  
+    FacturaID VARCHAR(50),
+    ProductoKey INT,
+    ClienteKey INT,
+    TiempoKey INT,
+    DireccionKey INT,
+    Cantidad INT,
+    Precio DECIMAL(10,2),
+    Iva Decimal (10,2),
+    Importe Decimal (10,2),
+    Descuento DECIMAL (10,2)
+ 
+) diststyle key;
+ 
+ 
+ALTER TABLE facfactura ADD constraint producto FOREIGN KEY (ProductoKey) REFERENCES dimproducto(ProductoKey);
+ALTER TABLE facfactura ADD constraint cliente FOREIGN KEY (ClienteKey) REFERENCES DimCliente(ClienteKey);
+ALTER TABLE facfactura ADD constraint tiempo FOREIGN KEY (TiempoKey) REFERENCES DimFecha(TiempoKey);
+ALTER TABLE facfactura ADD constraint direccion FOREIGN KEY (DireccionKey) REFERENCES DimDireccion(DireccionKey);
