@@ -27,27 +27,11 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_7H1z4ITREe6GgKJkXHasGw",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
     "id" : "_TDi_IIQOEe6EMbEIYxdGUg",
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_V2t-sIN8Ee6orPuZR_5G-w",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_7H1z4ITREe6GgKJkXHasGw - Addressmetadata",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_TDi_IIQOEe6EMbEIYxdGUg - metadataDeFactura",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_V2t-sIN8Ee6orPuZR_5G-w - metadata",
     "version" : "Latest",
     "type" : "schema"
   } ]
