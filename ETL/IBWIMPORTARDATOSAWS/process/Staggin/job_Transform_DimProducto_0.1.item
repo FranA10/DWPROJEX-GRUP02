@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:JetxuDTtRmmxZnaHGWgTOFDLyUST+GCMSoVKEJnz" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:z/8Mmu93eXMwuUCYKa9xAY//MhDHN/hczUiCpiXB" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:yqh0PF/Eb6va+4tz/ofidQUsvOBIP1qYT8JtqO3p" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:IR5Q2dSB9kKa6GehPgyB7+zbfwBgWcY/M0ZPqYwk" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -107,116 +107,12 @@
     <routinesParameter id="_VCGZEGcbEe6x-fB85yOBxw" name="TalendStringUtil"/>
     <routinesParameter id="_VB_rYGcbEe6x-fB85yOBxw" name="TalendString"/>
   </parameters>
-  <node componentName="tS3Connection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tS3Connection_1" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="CREDENTIAL_PROVIDER" value="STATIC_CREDENTIALS"/>
-    <elementParameter field="FILE" name="PROFILE_PATH" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PROFILE_NAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;AKIAWPQYH5GKGRDBIMFA&quot;"/>
-    <elementParameter field="PASSWORD" name="SECRET_KEY" value="enc:system.encryption.key.v1:tq/9Evm0XiPyH6FZLxlNSjZkYu9odF4ScX+UiK8mnnP9hX8JrAdIYwqGLK0xmzHJg6UFv9eoVBnUUO5CjD+Nja1D4M0Oug=="/>
-    <elementParameter field="CHECK" name="ASSUME_ROLE" value="false"/>
-    <elementParameter field="TEXT" name="ARN" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="ROLE_SESSION_NAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SESSION_DURATION" value="15" show="false"/>
-    <elementParameter field="OPENED_LIST" name="REGION" value="DEFAULT"/>
-    <elementParameter field="CHECK" name="ENCRYPT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="KEY_TYPE" value="KMS_CMK" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="ALGORITHM_SYMMETRIC_MASTER_KEY" value="AES" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="ALGORITHM_ASYMMETRIC_MASTER_KEY" value="RSA" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="ENCODING" value="BASE64" show="false"/>
-    <elementParameter field="PASSWORD" name="ENCRYPTED_KEY_CMK" value="enc:system.encryption.key.v1:S7H3Ew1ypnnk73meTyy99hHHhJpis3VoWDjuL/2I" show="false"/>
-    <elementParameter field="PASSWORD" name="ENCRYPTED_KEY_BASE64" value="enc:system.encryption.key.v1:U70inZUSo+W45GWd/ciUnT3wnbVivadve289pq0I" show="false"/>
-    <elementParameter field="FILE" name="ENCRYPTED_KEY_X509" value="&quot;&quot;" show="false"/>
-    <elementParameter field="FILE" name="PUBLIC_KEY" value="&quot;&quot;" show="false"/>
-    <elementParameter field="FILE" name="PRIVATE_KEY" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_REGION_ENDPOINT" value="false"/>
-    <elementParameter field="TEXT" name="REGION_ENDPOINT" value="&quot;s3.amazonaws.com&quot;" show="false"/>
-    <elementParameter field="CHECK" name="PATHSTYLEACCESS" value="false" show="false"/>
-    <elementParameter field="FILE" name="WEB_IDENTITY_TOKEN_FILE" value="" show="false"/>
-    <elementParameter field="TEXT" name="WEB_TOKEN_ARN" value="" show="false"/>
-    <elementParameter field="TEXT" name="WEB_TOKEN_ROLE_SESSION_NAME" value="" show="false"/>
-    <elementParameter field="CHECK" name="CONFIG_CLIENT" value="false"/>
-    <elementParameter field="TABLE" name="CLIENT_CONFIGURATION" show="false"/>
-    <elementParameter field="CHECK" name="SET_STS_ENDPOINT" value="false" show="false"/>
-    <elementParameter field="TEXT" name="STS_ENDPOINT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="OPENED_LIST" name="SIGNING_REGION" value="DEFAULT" show="false"/>
-    <elementParameter field="TEXT" name="EXTERNALID" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SERIALNUMBER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TOKENCODE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TABLE" name="TAGS" show="false"/>
-    <elementParameter field="TABLE" name="POLICY_TABLE" show="false"/>
-    <elementParameter field="MEMO" name="POLICY" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="CHECK_ACCESSIBILITY" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="CHECK_METHOD" value="BY_ACCOUNT_OWNER"/>
-    <elementParameter field="CHECK" name="ENABLE_ACCELERATE" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tS3Get" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tS3Get_1" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tS3Connection_1"/>
-    <elementParameter field="CLOSED_LIST" name="CREDENTIAL_PROVIDER" value="STATIC_CREDENTIALS" show="false"/>
-    <elementParameter field="FILE" name="PROFILE_PATH" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PROFILE_NAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="SECRET_KEY" value="enc:system.encryption.key.v1:MnI9VAhFMZvHVEt3JdAxKgqPKHUPC2QYHqb/orY7" show="false"/>
-    <elementParameter field="CHECK" name="ASSUME_ROLE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ARN" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="ROLE_SESSION_NAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SESSION_DURATION" value="15" show="false"/>
-    <elementParameter field="OPENED_LIST" name="REGION" value="DEFAULT" show="false"/>
-    <elementParameter field="CHECK" name="ENCRYPT" value="false" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="KEY_TYPE" value="KMS_CMK" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="ALGORITHM_SYMMETRIC_MASTER_KEY" value="AES" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="ALGORITHM_ASYMMETRIC_MASTER_KEY" value="RSA" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="ENCODING" value="BASE64" show="false"/>
-    <elementParameter field="PASSWORD" name="ENCRYPTED_KEY_CMK" value="enc:system.encryption.key.v1:5xeIlVixunhOP4pEAHSaTNWgfO6Z+RcDfH3l1+1G" show="false"/>
-    <elementParameter field="PASSWORD" name="ENCRYPTED_KEY_BASE64" value="enc:system.encryption.key.v1:F9ny6iuDzqEWfI8asV4hLH42zc+gR+SBpMAyopZH" show="false"/>
-    <elementParameter field="FILE" name="ENCRYPTED_KEY_X509" value="&quot;&quot;" show="false"/>
-    <elementParameter field="FILE" name="PUBLIC_KEY" value="&quot;&quot;" show="false"/>
-    <elementParameter field="FILE" name="PRIVATE_KEY" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="BUCKET" value="&quot;bucket-grupo2&quot;"/>
-    <elementParameter field="TEXT" name="KEY" value="&quot;01 raw/tabItem.csv&quot;"/>
-    <elementParameter field="FILE" name="FILE" value="&quot;C:/Users/AVILES/Documents/especializacion/tabItem.csv&quot;"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="FILE" name="WEB_IDENTITY_TOKEN_FILE" value="" show="false"/>
-    <elementParameter field="TEXT" name="WEB_TOKEN_ARN" value="" show="false"/>
-    <elementParameter field="TEXT" name="WEB_TOKEN_ROLE_SESSION_NAME" value="" show="false"/>
-    <elementParameter field="CHECK" name="CONFIG_CLIENT" value="false" show="false"/>
-    <elementParameter field="TABLE" name="CLIENT_CONFIGURATION" show="false"/>
-    <elementParameter field="CHECK" name="SET_STS_ENDPOINT" value="false" show="false"/>
-    <elementParameter field="TEXT" name="STS_ENDPOINT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="OPENED_LIST" name="SIGNING_REGION" value="DEFAULT" show="false"/>
-    <elementParameter field="TEXT" name="EXTERNALID" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SERIALNUMBER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TOKENCODE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TABLE" name="TAGS" show="false"/>
-    <elementParameter field="TABLE" name="POLICY_TABLE" show="false"/>
-    <elementParameter field="MEMO" name="POLICY" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_ACCELERATE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="USE_SELECT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="FILE_TYPE" value="CSV" show="false"/>
-    <elementParameter field="TEXT" name="QUERY" value="&quot;select s._1 from S3Object s&quot;" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="COMPRESSED_TYPE" value="NONE" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="JSON_TYPE" value="LINES" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="HEADER_TYPE" value="USE" show="false"/>
-    <elementParameter field="TEXT" name="FIELD_SEPARATOR" value="&quot;,&quot;" show="false"/>
-    <elementParameter field="CHECK" name="ADVANCE_CSV" value="false" show="false"/>
-    <elementParameter field="TABLE" name="CSV_CONFIGURATION" show="false"/>
-    <elementParameter field="CHECK" name="GLOBALMAP_INPUTSTREAM" value="false" show="false"/>
-    <elementParameter field="CHECK" name="CONFIG_OUTPUT" value="false" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="OUTPUT_TYPE" value="CSV" show="false"/>
-    <elementParameter field="TABLE" name="OUTPUT_CSV_CONFIG" show="false"/>
-    <elementParameter field="TEXT" name="JSON_RECORDDELIMITER" value="&quot;\n&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_TEMP_FILES_FOR_PARALLEL_DOWNLOAD" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="288">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_6Io1MIj5Ee6-hKKCoTkk7w - Itemmetadata" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/AVILES/Documents/especializacion/tabItemFixed.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Fran/Desktop/IBW-Proyecto/Raw/tabItem.csv&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
@@ -316,7 +212,7 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="item"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tFileInputDelimited_1">
+    <metadata connector="FLOW" label="Itemmetadata" name="tFileInputDelimited_1">
       <column comment="" key="false" length="10" name="name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="71" name="item_name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="71" name="description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -334,7 +230,7 @@
       <column comment="" key="false" length="0" name="parenttype" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="idx" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
     </metadata>
-    <metadata connector="REJECT" label="metadata" name="REJECT">
+    <metadata connector="REJECT" label="Itemmetadata" name="REJECT">
       <column comment="" key="false" length="10" name="name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="71" name="item_name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="71" name="description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -355,7 +251,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="288">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -377,7 +273,7 @@
       <column comment="" key="false" length="-1" name="Descripcion" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="var1" expression="Relational.ISNULL(row1.item_name) || StringHandling.TRIM(row1.item_name).equals(&quot;&quot;) || StringHandling.TRIM(row1.item_name).equals(&quot;''&quot;) || StringHandling.TRIM(row1.item_name).equals('&quot;') ? &quot;N/A&quot; : row1.item_name " type="id_String"/>
         <mapperTableEntries name="var2" expression="Relational.ISNULL(row1.clasificacion_de_producto) || StringHandling.TRIM(row1.clasificacion_de_producto).equals(&quot;&quot;) ? &quot;N/A&quot; : row1.clasificacion_de_producto " type="id_String"/>
@@ -411,11 +307,11 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="288">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/AVILES/Documents/especializacion/outitem.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Fran/Desktop/IBW-Proyecto/Staggin/DimProducto.csv&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
@@ -449,10 +345,36 @@
       <column comment="" key="false" length="-1" name="Descripcion" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tS3Connection_1" offsetLabelX="0" offsetLabelY="0" source="tS3Connection_1" target="tS3Get_1">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
-  </connection>
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Fran/Desktop/IBW-Proyecto/Staggin/DimProducto.csv&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Users/Fran/Desktop/MasterOnly/Especializacion/Proyecto/Parcial03-OR14008/Parcial03/delete_folder&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;C:/Users/Fran/Desktop/MasterOnly/Especializacion/Proyecto/Parcial03-OR14008/Parcial03/delete_folder or delete_file&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="CHECK" name="FOLDER" value="false"/>
+    <elementParameter field="CHECK" name="FOLDER_FILE" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note &quot;CURRENT_STATUS&quot; including:&#xA;&quot;File (or path) deleted.&quot;&#xA;&quot;No file (or path) deleted.&quot;&#xA;&quot;File (or path) does not exist or is invalid.&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFileDelete_1">
+      <column comment="" key="false" length="10" name="_name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="_nombre_customer" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="55" name="_nombre_comercial" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="111" name="_giro" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="55" name="_tipo_facturacion" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="38" name="_inicio_de_cliente" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="_owner" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="45" name="_creation" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="_docstatus" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="_modified" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="_modified_by" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="_parent" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="13" name="_parentfield" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="_parenttype" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="13" name="_idx" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="owner"/>
@@ -508,18 +430,16 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="outitem" show="false"/>
   </connection>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tS3Connection_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tS3Get_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileDelete_1" offsetLabelX="0" offsetLabelY="0" source="tFileDelete_1" target="tFileInputDelimited_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>

@@ -126,6 +126,11 @@
     </dependency>
     <dependency>
       <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_GetFechaData</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
       <artifactId>job_GetFacturaData</artifactId>
       <version>0.1.0</version>
     </dependency>
