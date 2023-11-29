@@ -304,16 +304,6 @@ public class job_main implements TalendJob {
 		tRunJob_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tRunJob_3_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tRunJob_3_onSubJobError(exception, errorComponent, globalMap);
-	}
-
 	public void tRunJob_4_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -322,6 +312,16 @@ public class job_main implements TalendJob {
 		status = "failure";
 
 		tRunJob_4_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tRunJob_3_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tRunJob_3_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tRunJob_5_error(Exception exception, String errorComponent,
@@ -350,7 +350,7 @@ public class job_main implements TalendJob {
 
 	}
 
-	public void tRunJob_3_onSubJobError(Exception exception, String errorComponent,
+	public void tRunJob_4_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
@@ -358,7 +358,7 @@ public class job_main implements TalendJob {
 
 	}
 
-	public void tRunJob_4_onSubJobError(Exception exception, String errorComponent,
+	public void tRunJob_3_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
@@ -525,6 +525,17 @@ public class job_main implements TalendJob {
 				 * [tRunJob_1 end ] stop
 				 */
 			} // end the resume
+
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tRunJob_1:OnSubjobOk", "",
+						Thread.currentThread().getId() + "", "", "", "", "", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
+			}
+
+			tRunJob_2Process(globalMap);
 
 		} catch (java.lang.Exception e) {
 
@@ -712,6 +723,17 @@ public class job_main implements TalendJob {
 				 */
 			} // end the resume
 
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tRunJob_2:OnSubjobOk", "",
+						Thread.currentThread().getId() + "", "", "", "", "", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk2", 0, "ok");
+			}
+
+			tRunJob_4Process(globalMap);
+
 		} catch (java.lang.Exception e) {
 
 			TalendException te = new TalendException(e, currentComponent, globalMap);
@@ -744,192 +766,6 @@ public class job_main implements TalendJob {
 		}
 
 		globalMap.put("tRunJob_2_SUBPROCESS_STATE", 1);
-	}
-
-	public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tRunJob_3_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tRunJob_3 begin ] start
-				 */
-
-				ok_Hash.put("tRunJob_3", false);
-				start_Hash.put("tRunJob_3", System.currentTimeMillis());
-
-				currentComponent = "tRunJob_3";
-
-				int tos_count_tRunJob_3 = 0;
-
-				/**
-				 * [tRunJob_3 begin ] stop
-				 */
-
-				/**
-				 * [tRunJob_3 main ] start
-				 */
-
-				currentComponent = "tRunJob_3";
-
-				java.util.List<String> paraList_tRunJob_3 = new java.util.ArrayList<String>();
-
-				paraList_tRunJob_3.add("--father_pid=" + pid);
-
-				paraList_tRunJob_3.add("--root_pid=" + rootPid);
-
-				paraList_tRunJob_3.add("--father_node=tRunJob_3");
-
-				paraList_tRunJob_3.add("--context=Default");
-
-				if (enableLogStash) {
-					paraList_tRunJob_3.add("--audit.enabled=" + enableLogStash);
-				}
-
-				// for feature:10589
-
-				paraList_tRunJob_3.add("--stat_port=" + portStats);
-
-				if (resuming_logs_dir_path != null) {
-					paraList_tRunJob_3.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
-				}
-				String childResumePath_tRunJob_3 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
-				String tRunJobName_tRunJob_3 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
-				if ("tRunJob_3".equals(tRunJobName_tRunJob_3) && childResumePath_tRunJob_3 != null) {
-					paraList_tRunJob_3.add("--resuming_checkpoint_path="
-							+ ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
-				}
-				paraList_tRunJob_3.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_3");
-
-				java.util.Map<String, Object> parentContextMap_tRunJob_3 = new java.util.HashMap<String, Object>();
-
-				Object obj_tRunJob_3 = null;
-
-				ibwimportardatosaws.job_getfacturadata_0_1.job_GetFacturaData childJob_tRunJob_3 = new ibwimportardatosaws.job_getfacturadata_0_1.job_GetFacturaData();
-				// pass DataSources
-				java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_3 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
-						.get(KEY_DB_DATASOURCES);
-				if (null != talendDataSources_tRunJob_3) {
-					java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_3 = new java.util.HashMap<String, javax.sql.DataSource>();
-					for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_3 : talendDataSources_tRunJob_3
-							.entrySet()) {
-						dataSources_tRunJob_3.put(talendDataSourceEntry_tRunJob_3.getKey(),
-								talendDataSourceEntry_tRunJob_3.getValue().getRawDataSource());
-					}
-					childJob_tRunJob_3.setDataSources(dataSources_tRunJob_3);
-				}
-
-				childJob_tRunJob_3.parentContextMap = parentContextMap_tRunJob_3;
-
-				String[][] childReturn_tRunJob_3 = childJob_tRunJob_3
-						.runJob((String[]) paraList_tRunJob_3.toArray(new String[paraList_tRunJob_3.size()]));
-
-				if (childJob_tRunJob_3.getErrorCode() == null) {
-					globalMap.put("tRunJob_3_CHILD_RETURN_CODE",
-							childJob_tRunJob_3.getStatus() != null && ("failure").equals(childJob_tRunJob_3.getStatus())
-									? 1
-									: 0);
-				} else {
-					globalMap.put("tRunJob_3_CHILD_RETURN_CODE", childJob_tRunJob_3.getErrorCode());
-				}
-				if (childJob_tRunJob_3.getExceptionStackTrace() != null) {
-					globalMap.put("tRunJob_3_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_3.getExceptionStackTrace());
-				}
-				errorCode = childJob_tRunJob_3.getErrorCode();
-				if (childJob_tRunJob_3.getErrorCode() != null || ("failure").equals(childJob_tRunJob_3.getStatus())) {
-					java.lang.Exception ce_tRunJob_3 = childJob_tRunJob_3.getException();
-					throw new RuntimeException("Child job running failed.\n" + ((ce_tRunJob_3 != null)
-							? (ce_tRunJob_3.getClass().getName() + ": " + ce_tRunJob_3.getMessage())
-							: ""));
-				}
-
-				tos_count_tRunJob_3++;
-
-				/**
-				 * [tRunJob_3 main ] stop
-				 */
-
-				/**
-				 * [tRunJob_3 process_data_begin ] start
-				 */
-
-				currentComponent = "tRunJob_3";
-
-				/**
-				 * [tRunJob_3 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tRunJob_3 process_data_end ] start
-				 */
-
-				currentComponent = "tRunJob_3";
-
-				/**
-				 * [tRunJob_3 process_data_end ] stop
-				 */
-
-				/**
-				 * [tRunJob_3 end ] start
-				 */
-
-				currentComponent = "tRunJob_3";
-
-				ok_Hash.put("tRunJob_3", true);
-				end_Hash.put("tRunJob_3", System.currentTimeMillis());
-
-				/**
-				 * [tRunJob_3 end ] stop
-				 */
-			} // end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent, globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tRunJob_3 finally ] start
-				 */
-
-				currentComponent = "tRunJob_3";
-
-				/**
-				 * [tRunJob_3 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tRunJob_3_SUBPROCESS_STATE", 1);
 	}
 
 	public void tRunJob_4Process(final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1084,6 +920,17 @@ public class job_main implements TalendJob {
 				 */
 			} // end the resume
 
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tRunJob_4:OnSubjobOk", "",
+						Thread.currentThread().getId() + "", "", "", "", "", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk3", 0, "ok");
+			}
+
+			tRunJob_3Process(globalMap);
+
 		} catch (java.lang.Exception e) {
 
 			TalendException te = new TalendException(e, currentComponent, globalMap);
@@ -1116,6 +963,203 @@ public class job_main implements TalendJob {
 		}
 
 		globalMap.put("tRunJob_4_SUBPROCESS_STATE", 1);
+	}
+
+	public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+		globalMap.put("tRunJob_3_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tRunJob_3 begin ] start
+				 */
+
+				ok_Hash.put("tRunJob_3", false);
+				start_Hash.put("tRunJob_3", System.currentTimeMillis());
+
+				currentComponent = "tRunJob_3";
+
+				int tos_count_tRunJob_3 = 0;
+
+				/**
+				 * [tRunJob_3 begin ] stop
+				 */
+
+				/**
+				 * [tRunJob_3 main ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				java.util.List<String> paraList_tRunJob_3 = new java.util.ArrayList<String>();
+
+				paraList_tRunJob_3.add("--father_pid=" + pid);
+
+				paraList_tRunJob_3.add("--root_pid=" + rootPid);
+
+				paraList_tRunJob_3.add("--father_node=tRunJob_3");
+
+				paraList_tRunJob_3.add("--context=Default");
+
+				if (enableLogStash) {
+					paraList_tRunJob_3.add("--audit.enabled=" + enableLogStash);
+				}
+
+				// for feature:10589
+
+				paraList_tRunJob_3.add("--stat_port=" + portStats);
+
+				if (resuming_logs_dir_path != null) {
+					paraList_tRunJob_3.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
+				}
+				String childResumePath_tRunJob_3 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
+				String tRunJobName_tRunJob_3 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
+				if ("tRunJob_3".equals(tRunJobName_tRunJob_3) && childResumePath_tRunJob_3 != null) {
+					paraList_tRunJob_3.add("--resuming_checkpoint_path="
+							+ ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
+				}
+				paraList_tRunJob_3.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_3");
+
+				java.util.Map<String, Object> parentContextMap_tRunJob_3 = new java.util.HashMap<String, Object>();
+
+				Object obj_tRunJob_3 = null;
+
+				ibwimportardatosaws.job_getfacturadata_0_1.job_GetFacturaData childJob_tRunJob_3 = new ibwimportardatosaws.job_getfacturadata_0_1.job_GetFacturaData();
+				// pass DataSources
+				java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_3 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
+						.get(KEY_DB_DATASOURCES);
+				if (null != talendDataSources_tRunJob_3) {
+					java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_3 = new java.util.HashMap<String, javax.sql.DataSource>();
+					for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_3 : talendDataSources_tRunJob_3
+							.entrySet()) {
+						dataSources_tRunJob_3.put(talendDataSourceEntry_tRunJob_3.getKey(),
+								talendDataSourceEntry_tRunJob_3.getValue().getRawDataSource());
+					}
+					childJob_tRunJob_3.setDataSources(dataSources_tRunJob_3);
+				}
+
+				childJob_tRunJob_3.parentContextMap = parentContextMap_tRunJob_3;
+
+				String[][] childReturn_tRunJob_3 = childJob_tRunJob_3
+						.runJob((String[]) paraList_tRunJob_3.toArray(new String[paraList_tRunJob_3.size()]));
+
+				if (childJob_tRunJob_3.getErrorCode() == null) {
+					globalMap.put("tRunJob_3_CHILD_RETURN_CODE",
+							childJob_tRunJob_3.getStatus() != null && ("failure").equals(childJob_tRunJob_3.getStatus())
+									? 1
+									: 0);
+				} else {
+					globalMap.put("tRunJob_3_CHILD_RETURN_CODE", childJob_tRunJob_3.getErrorCode());
+				}
+				if (childJob_tRunJob_3.getExceptionStackTrace() != null) {
+					globalMap.put("tRunJob_3_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_3.getExceptionStackTrace());
+				}
+				errorCode = childJob_tRunJob_3.getErrorCode();
+				if (childJob_tRunJob_3.getErrorCode() != null || ("failure").equals(childJob_tRunJob_3.getStatus())) {
+					java.lang.Exception ce_tRunJob_3 = childJob_tRunJob_3.getException();
+					throw new RuntimeException("Child job running failed.\n" + ((ce_tRunJob_3 != null)
+							? (ce_tRunJob_3.getClass().getName() + ": " + ce_tRunJob_3.getMessage())
+							: ""));
+				}
+
+				tos_count_tRunJob_3++;
+
+				/**
+				 * [tRunJob_3 main ] stop
+				 */
+
+				/**
+				 * [tRunJob_3 process_data_begin ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				/**
+				 * [tRunJob_3 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tRunJob_3 process_data_end ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				/**
+				 * [tRunJob_3 process_data_end ] stop
+				 */
+
+				/**
+				 * [tRunJob_3 end ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				ok_Hash.put("tRunJob_3", true);
+				end_Hash.put("tRunJob_3", System.currentTimeMillis());
+
+				/**
+				 * [tRunJob_3 end ] stop
+				 */
+			} // end the resume
+
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tRunJob_3:OnSubjobOk", "",
+						Thread.currentThread().getId() + "", "", "", "", "", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk4", 0, "ok");
+			}
+
+			tRunJob_5Process(globalMap);
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent, globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tRunJob_3 finally ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				/**
+				 * [tRunJob_3 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tRunJob_3_SUBPROCESS_STATE", 1);
 	}
 
 	public void tRunJob_5Process(final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1519,54 +1563,6 @@ public class job_main implements TalendJob {
 			e_tRunJob_1.printStackTrace();
 
 		}
-		try {
-			errorCode = null;
-			tRunJob_2Process(globalMap);
-			if (!"failure".equals(status)) {
-				status = "end";
-			}
-		} catch (TalendException e_tRunJob_2) {
-			globalMap.put("tRunJob_2_SUBPROCESS_STATE", -1);
-
-			e_tRunJob_2.printStackTrace();
-
-		}
-		try {
-			errorCode = null;
-			tRunJob_3Process(globalMap);
-			if (!"failure".equals(status)) {
-				status = "end";
-			}
-		} catch (TalendException e_tRunJob_3) {
-			globalMap.put("tRunJob_3_SUBPROCESS_STATE", -1);
-
-			e_tRunJob_3.printStackTrace();
-
-		}
-		try {
-			errorCode = null;
-			tRunJob_4Process(globalMap);
-			if (!"failure".equals(status)) {
-				status = "end";
-			}
-		} catch (TalendException e_tRunJob_4) {
-			globalMap.put("tRunJob_4_SUBPROCESS_STATE", -1);
-
-			e_tRunJob_4.printStackTrace();
-
-		}
-		try {
-			errorCode = null;
-			tRunJob_5Process(globalMap);
-			if (!"failure".equals(status)) {
-				status = "end";
-			}
-		} catch (TalendException e_tRunJob_5) {
-			globalMap.put("tRunJob_5_SUBPROCESS_STATE", -1);
-
-			e_tRunJob_5.printStackTrace();
-
-		}
 
 		this.globalResumeTicket = true;// to run tPostJob
 
@@ -1719,6 +1715,6 @@ public class job_main implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 57637 characters generated by Talend Open Studio for Data Integration on the
- * 21 de noviembre de 2023, 23:13:13 CST
+ * 58433 characters generated by Talend Open Studio for Data Integration on the
+ * 28 de noviembre de 2023, 22:21:18 CST
  ************************************************************************************************/

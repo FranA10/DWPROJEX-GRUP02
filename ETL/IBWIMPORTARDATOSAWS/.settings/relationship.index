@@ -97,6 +97,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_RoYhUIjzEe6-hKKCoTkk7w",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_03Gq4I5vEe6bRo3nyuwbzg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_03Gq4I5vEe6bRo3nyuwbzg - fechametadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_l1YL8IUKEe64b5eSF0NKOg",
     "version" : "0.1",
     "type" : "job"
