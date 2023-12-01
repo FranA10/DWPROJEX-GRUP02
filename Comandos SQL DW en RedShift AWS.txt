@@ -6,187 +6,7 @@ CREATE TABLE DimProducto (
     Nombre VARCHAR(100),
     Categoria VARCHAR(50),
     Subcategoria VARCHAR(50),
-    Descripcion VARCHAR(100),
-) diststyle key
-
-
-CREATE TABLE DimCliente (
-    ClienteKey INT PRIMARY KEY IDENTITY(1,1) not null sortkey distkey,
-    ClienteID VARCHAR(50),
-    Nombre VARCHAR(100),
-    Nit VARCHAR(50),
-    Giro VARCHAR(150),
-    TipoDeCliente VARCHAR(50),
-    FechaRegistro DATE
-) diststyle key
-
-
-CREATE TABLE Dimfecha (
-    TiempoKey INT PRIMARY KEY IDENTITY(1,1) not null sortkey distkey,
-    datekey integer ENCODE az64,
-    date date ENCODE az64,
-    daynumberofweek integer ENCODE az64,
-    daynumberofmonth integer ENCODE az64,
-    daynumberofyear integer ENCODE az64,
-    weeknumberofyear integer ENCODE az64,
-    monthnumberofyear integer ENCODE az64,
-    calendarquarterofyear integer ENCODE az64,
-    calendarsemesterofyear integer ENCODE az64,
-    calendaryear integer ENCODE az64,
-    calendaryearweek character varying(256) ENCODE lzo,
-    calendaryearmonth character varying(256) ENCODE lzo,
-    calendaryearquarter character varying(256) ENCODE lzo,
-    calendaryearsemester character varying(256) ENCODE lzo,
-    englishdaynameofweek character varying(256) ENCODE lzo,
-    spanishdaynameofweek character varying(256) ENCODE lzo,
-    englishmonthname character varying(256) ENCODE lzo,
-    spanishmonthname character varying(256) ENCODE lzo,
-) diststyle key
-
-
-CREATE TABLE DimDireccion (
-    DireccionKey INT PRIMARY KEY IDENTITY(1,1) not null sortkey distkey,
-    DireccionID VARCHAR(50),
-    Zona VARCHAR(100),
-    Ciudad VARCHAR(50),
-    Distrito VARCHAR(50),    
-    Departamento VARCHAR(50)
-) diststyle key
-
-
--- Crear la tabla de hecho
-CREATE TABLE FacFactura (
-    FacturaKey INT PRIMARY KEY IDENTITY(1,1) not null sortkey distkey,  
-    FacturaID VARCHAR(50),
-    ProductoKey INT,
-    ClienteKey INT,
-    TiempoKey INT,
-    DireccionKey INT,
-    Cantidad INT,
-    Precio DECIMAL(10,2),
-    Iva Decimal (10,2),
-    Importe Decimal (10,2),
-    Descuento DECIMAL (10,2)
- 
-) diststyle key
-distkey (FacturaKey) 
-
- 
-ALTER TABLE facfactura ADD constraint producto FOREIGN KEY (ProductoKey) REFERENCES dimproducto(ProductoKey);
-ALTER TABLE facfactura ADD constraint cliente FOREIGN KEY (ClienteKey) REFERENCES DimCliente(ClienteKey);
-ALTER TABLE facfactura ADD constraint tiempo FOREIGN KEY (TiempoKey) REFERENCES DimFecha(TiempoKey);
-ALTER TABLE facfactura ADD constraint direccion FOREIGN KEY (DireccionKey) REFERENCES DimDireccion(DireccionKey);
-
-
-
-****************************************RAFA*********************************************************
-
-
-CREATE TABLE public.dimproducto (
-    productokey integer NOT NULL identity(1, 1) ENCODE raw
-    distkey
-,
-        productoid character varying(50) ENCODE lzo,
-        nombre character varying(100) ENCODE lzo,
-        categoria character varying(50) ENCODE lzo,
-        subcategoria character varying(50) ENCODE lzo,
-        descripcion character varying(50) ENCODE lzo,
-        precio numeric(10, 2) ENCODE az64,
-        PRIMARY KEY (productokey)
-) DISTSTYLE KEY
-SORTKEY
-    (productokey);
-
-DROP TABLE dimproducto CASCADE;
-
-
-
-
-
-
-***********************************************Francisco**************************************************
-
-CREATE TABLE public.dimcliente (
-    clientekey integer NOT NULL identity(1, 1) ENCODE raw
-    distkey
-,
-        clienteid character varying(50) ENCODE lzo,
-        nombre character varying(100) ENCODE lzo,
-        Nit character varying(50) ENCODE lzo,
-        Giro character varying(150) ENCODE lzo,
-        TipoDeCliente character varying(50) ENCODE lzo,
-        FechaRegistro DATE,
-        PRIMARY KEY (clientekey)
-) DISTSTYLE KEY
-SORTKEY
-    (clientekey);
-
-DROP TABLE dimcliente CASCADE;
-
-
-********************************************** Rafa ultimo cambio en tabla de hechos ***********************
-
-CREATE TABLE FacFactura (
-    FacturaKey INT PRIMARY KEY IDENTITY(1,1) not null sortkey distkey,  
-    FacturaID VARCHAR(50),
-    ProductoKey INT,
-    ClienteKey INT,
-    TiempoKey INT,
-    DireccionKey INT,
-    Cantidad INT,
-    Precio DECIMAL(10,2),
-    Iva Decimal (10,2),
-    Importe Decimal (10,2),
-    Descuento DECIMAL (10,2)
- 
-) diststyle key;
- 
- 
-ALTER TABLE facfactura ADD constraint producto FOREIGN KEY (ProductoKey) REFERENCES dimproducto(ProductoKey);
-ALTER TABLE facfactura ADD constraint cliente FOREIGN KEY (ClienteKey) REFERENCES DimCliente(ClienteKey);
-ALTER TABLE facfactura ADD constraint tiempo FOREIGN KEY (TiempoKey) REFERENCES DimFecha(TiempoKey);
-ALTER TABLE facfactura ADD constraint direccion FOREIGN KEY (DireccionKey) REFERENCES DimDireccion(DireccionKey);
-
-
-****************************************** fecha final **********************************************************
-
-CREATE TABLE public.dimfecha (
-    tiempokey integer NOT NULL identity(1, 1) ENCODE az64,
-    datekey integer ENCODE az64,
-    date date ENCODE az64,
-    daynumberofweek integer ENCODE az64,
-    daynumberofmonth integer ENCODE az64,
-    daynumberofyear integer ENCODE az64,
-    weeknumberofyear integer ENCODE az64,
-    monthnumberofyear integer ENCODE az64,
-    calendarquarterofyear integer ENCODE az64,
-    calendarsemesterofyear integer ENCODE az64,
-    calendaryear integer ENCODE az64,
-    calendaryearweek character varying(256) ENCODE lzo,
-    calendaryearmonth character varying(256) ENCODE lzo,
-    calendaryearquarter character varying(256) ENCODE lzo,
-    calendaryearsemester character varying(256) ENCODE lzo,
-    englishdaynameofweek character varying(256) ENCODE lzo,
-    spanishdaynameofweek character varying(256) ENCODE lzo,
-    englishmonthname character varying(256) ENCODE lzo,
-    spanishmonthname character varying(256) ENCODE lzo,
-    PRIMARY KEY (tiempokey)
-) DISTSTYLE AUTO;
-
-
-
-
-
-
-*****************************
-
-CREATE TABLE DimProducto (
-    ProductoKey INT PRIMARY KEY IDENTITY(1,1) not null sortkey distkey,
-    ProductoID VARCHAR(50),
-    Nombre VARCHAR(100),
-    Categoria VARCHAR(50),
-    Subcategoria VARCHAR(50),
-    Descripcion VARCHAR(50)
+    Descripcion VARCHAR(100)
 ) diststyle key;
 
 
@@ -234,6 +54,7 @@ CREATE TABLE DimDireccion (
 ) diststyle key;
 
 
+-- Crear la tabla de hecho
 CREATE TABLE FacFactura (
     FacturaKey INT PRIMARY KEY IDENTITY(1,1) not null sortkey distkey,  
     FacturaID VARCHAR(50),
@@ -246,6 +67,7 @@ CREATE TABLE FacFactura (
     Iva Decimal (10,2),
     Importe Decimal (10,2),
     Descuento DECIMAL (10,2)
+ 
 ) diststyle key;
 
  
