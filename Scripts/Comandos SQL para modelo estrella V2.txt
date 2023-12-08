@@ -1,0 +1,80 @@
+﻿-- Crear la tabla de dimensiones
+
+-- Dimensión Producto
+CREATE TABLE DimProducto (
+    ProductoKey INT PRIMARY KEY,
+    ProductoID VARCHAR(50),
+    Nombre VARCHAR(100),
+    Categoria VARCHAR(50),
+    Subcategoria VARCHAR(50),
+    Descripcion VARCHAR(100),
+    -- Otros atributos del producto
+);
+
+-- Dimensión Cliente
+CREATE TABLE DimCliente (
+    ClienteKey INT PRIMARY KEY,
+    ClienteID VARCHAR(50),
+    Nombre VARCHAR(100),
+    Nit VARCHAR(50),
+    Giro VARCHAR(150),
+    TipoDeCliente VARCHAR(50),
+    FechaRegistro DATE,
+    -- Otros atributos del cliente
+);
+
+-- Dimensión Tiempo
+CREATE TABLE DimTiempo (
+    TiempoKey INT PRIMARY KEY,
+    datekey integer,
+    date date,
+    daynumberofweek integer,
+    daynumberofmonth integer,
+    daynumberofyear integer,
+    weeknumberofyear integer,
+    monthnumberofyear integer,
+    calendarquarterofyear integer,
+    calendarsemesterofyear integer,
+    calendaryear integer,
+    calendaryearweek character varying(256),
+    calendaryearmonth character varying(256),
+    calendaryearquarter character varying(256),
+    calendaryearsemester character varying(256),
+    englishdaynameofweek character varying(256),
+    spanishdaynameofweek character varying(256),
+    englishmonthname character varying(256),
+    spanishmonthname character varying(256),
+    -- Otros atributos relacionados con la fecha
+);
+
+
+-- Dimensión Dirección
+CREATE TABLE DimDireccion (
+    DireccionKey INT PRIMARY KEY,
+    DireccionID VARCHAR(50),
+    Zona VARCHAR(100),
+    Ciudad VARCHAR(50),
+    Distrito VARCHAR(50),    
+    Departamento VARCHAR(50),
+    -- Otros atributos de la dirección
+);
+
+-- Crear la tabla de hecho
+CREATE TABLE FacFactura (
+    FacturaKey INT PRIMARY KEY,    
+    FacturaID VARCHAR(50),
+    ProductoKey INT,
+    ClienteKey INT,
+    TiempoKey INT,
+    DireccionKey INT,
+    Cantidad INT,
+    Precio DECIMAL(10,2),
+	Iva Decimal (10,2),
+	Importe Decimal (10,2),
+	Descuento DECIMAL (10,2),
+  -- Otros atributos de la factura
+    FOREIGN KEY (ProductoKey) REFERENCES DimProducto(ProductoKey),
+    FOREIGN KEY (ClienteKey) REFERENCES DimCliente(ClienteKey),
+    FOREIGN KEY (TiempoKey) REFERENCES DimTiempo(TiempoKey),
+    FOREIGN KEY (DireccionKey) REFERENCES DimDireccion(DireccionKey)
+);
