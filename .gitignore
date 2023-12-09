@@ -9,3 +9,14 @@ sqlPatterns/
 poms/
 #talend.project
 #.project
+**/jobInfo.properties
+ETL/.JETEmitters/
+ETL/.Java/
+ETL/.metadata/
+ETL/IBWIMPORTARDATOSAWS/code/routines/system/*.*
+ETL/IBWIMPORTARDATOSAWS/temp/
+ETL/IBWIMPORTARDATOSAWS/sqlPatterns/
+ETL/.settings
+ETL/IBWIMPORTARDATOSAWS/poms/
+ETL/IBWIMPORTARDATOSAWS/talend.project
+ETL/IBWIMPORTARDATOSAWS/.project

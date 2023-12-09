@@ -11,6 +11,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_42gCoIHMEe6c1buB0FeGTA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_6Io1MIj5Ee6-hKKCoTkk7w - Itemmetadata",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_mYXGoIQtEe6nJbq8M9XY1Q - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_5H8YwIQNEe6EMbEIYxdGUg",
     "version" : "0.1",
     "type" : "job"
@@ -21,6 +36,36 @@
     "type" : "property"
   }, {
     "id" : "_TDi_IIQOEe6EMbEIYxdGUg - metadataDeFactura",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_6TL-4IREEe6nJbq8M9XY1Q",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_K7uecIRFEe6nJbq8M9XY1Q",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_K7uecIRFEe6nJbq8M9XY1Q - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_Hiy4sITSEe6GgKJkXHasGw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_7H1z4ITREe6GgKJkXHasGw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_7H1z4ITREe6GgKJkXHasGw - Addressmetadata",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -37,6 +82,66 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_QJkdEITZEe6GgKJkXHasGw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_NMG7gITbEe6GgKJkXHasGw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_NMG7gITbEe6GgKJkXHasGw - direccionmetadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_RoYhUIjzEe6-hKKCoTkk7w",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_03Gq4I5vEe6bRo3nyuwbzg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_03Gq4I5vEe6bRo3nyuwbzg - fechametadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_l1YL8IUKEe64b5eSF0NKOg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_uoxvsIUUEe64b5eSF0NKOg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_uoxvsIUUEe64b5eSF0NKOg - datemetadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_qObLkIXVEe621p340XYs7g",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_2exUAIdjEe6CRI7WQiNGFg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_2exUAIdjEe6CRI7WQiNGFg - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_qjMagH6qEe62Lpzx59qe1g",
     "version" : "0.1",
     "type" : "job"
@@ -46,11 +151,51 @@
     "version" : "Latest",
     "type" : "job"
   }, {
+    "id" : "IBWIMPORTARDATOSAWS:_42gCoIHMEe6c1buB0FeGTA",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "IBWIMPORTARDATOSAWS:_5H8YwIQNEe6EMbEIYxdGUg",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "IBWIMPORTARDATOSAWS:_6TL-4IREEe6nJbq8M9XY1Q",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
     "id" : "IBWIMPORTARDATOSAWS:_CYQF8H69Ee62Lpzx59qe1g",
     "version" : "Latest",
     "type" : "job"
   }, {
+    "id" : "IBWIMPORTARDATOSAWS:_Hiy4sITSEe6GgKJkXHasGw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "IBWIMPORTARDATOSAWS:_MmcpsIJqEe6qiednM1BjBA",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "IBWIMPORTARDATOSAWS:_QJkdEITZEe6GgKJkXHasGw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "IBWIMPORTARDATOSAWS:_RoYhUIjzEe6-hKKCoTkk7w",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "IBWIMPORTARDATOSAWS:_YFoRkIjzEe6-hKKCoTkk7w",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "IBWIMPORTARDATOSAWS:_l1YL8IUKEe64b5eSF0NKOg",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
     "id" : "IBWIMPORTARDATOSAWS:_nwF7kH68Ee62Lpzx59qe1g",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "IBWIMPORTARDATOSAWS:_qObLkIXVEe621p340XYs7g",
     "version" : "Latest",
     "type" : "job"
   }, {

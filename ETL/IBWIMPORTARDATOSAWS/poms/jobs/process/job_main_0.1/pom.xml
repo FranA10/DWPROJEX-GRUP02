@@ -126,6 +126,46 @@
     </dependency>
     <dependency>
       <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_GetFechaData</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_Transform_DimProducto</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_fecha</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_Transform_FactFactura</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_producto</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_Transform_DimDireccion</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_factura</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_Transform_DimCustomer</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
       <artifactId>job_GetFacturaData</artifactId>
       <version>0.1.0</version>
     </dependency>
@@ -141,7 +181,17 @@
     </dependency>
     <dependency>
       <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_cliente</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
       <artifactId>job_GetAddressData</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.ibwimportardatosaws.job</groupId>
+      <artifactId>job_direccion</artifactId>
       <version>0.1.0</version>
     </dependency>
   </dependencies>
